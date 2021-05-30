@@ -11,6 +11,6 @@ amount:number;
     this.thumbnail = thumbnail;
     this.name = name;
     this.price = price;
-    this.amount = amount;
+    this.amount = amount
   }
 }
