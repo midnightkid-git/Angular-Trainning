@@ -9,49 +9,49 @@ export class TableComponent implements OnInit {
   stt : number = 0;
   products : Product[] = [
     {
-      id : '24361',
+      id : 'VGA24361',
       thumbnail: '../assets/products/1.png',
       name:'GTX 1050TI',
       price:2900000,
       amount:2
     },
     {
-      id : '56332',
+      id : 'VGA56332',
       thumbnail: '../assets/products/2.png',
       name:'RTX 3060',
       price:26000000,
       amount:2
     },
     {
-      id : '36233',
+      id : 'VGA36233',
       thumbnail: '../assets/products/3.png',
       name:'GTX 1050TI 4GB',
       price:2300000,
       amount:4
     },
     {
-      id : '46436',
+      id : 'VGA46436',
       thumbnail: '../assets/products/4.png',
       name:'GT 710',
       price:600000,
       amount:6
     },
     {
-      id : '54366',
+      id : 'VGA54366',
       thumbnail: '../assets/products/5.png',
       name:'GTX 750',
       price:1200000,
       amount:3
     },
     {
-      id : '632235',
+      id : 'VGA632235',
       thumbnail: '../assets/products/6.png',
       name:'GTX 1650',
       price:5900000,
       amount:2
     },
     {
-      id : '136367',
+      id : 'VGA136367',
       thumbnail: '../assets/products/7.png',
       name:'RTX 2060',
       price:15000000,
