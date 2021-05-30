@@ -1,1 +1,23 @@
-<p>table works!</p>
+<div class="container">
+    <table class="table text-center table-striped">
+        <thead>
+            <tr>
+                <th>PID</th>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+
+        <tr *ngFor="let product of products">
+            <td scope="row">{{product.id}}</td>
+            <td><img [src]="product.thumbnail" alt=""></td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.amount}}</td>
+            <td><button (click)='removeProduct()'>Remove</button></td>
+        </tr>
+
+    </table>
+</div>
