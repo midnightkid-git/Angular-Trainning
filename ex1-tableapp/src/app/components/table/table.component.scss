@@ -1,0 +1,22 @@
+th {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td {
+    font-family: monospace;
+}
+
+.item {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    .remove_button {
+        border-radius: 10px;
+        background-color: white;
+    }
+    .remove_button:hover {
+        transition: linear 0.2s;
+        background-color: red;
+        color: white;
+    }
+}

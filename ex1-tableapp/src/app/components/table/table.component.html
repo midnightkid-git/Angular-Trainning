@@ -1,25 +1,31 @@
 <div class="container">
-    <table class="table text-center table-striped">
+    <table class="table   text-center table-striped">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>Ảnh minh họa</th>
-                <th>Tên sản phẩm</th>
-                <th>Giá</th>
-                <th>Số lượng</th>
-                <th>Xóa</th>
+            <tr class="item header">
+                <th class="align-middle">ID</th>
+                <th class="align-middle">Ảnh minh họa</th>
+                <th class="align-middle">Tên sản phẩm</th>
+                <th class="align-middle">Giá</th>
+                <th class="align-middle">Số lượng</th>
+                <th class="align-middle">Xóa</th>
             </tr>
         </thead>
-
-        <tr *ngFor="let product of listProducts">
-
-            <!-- Template Reference variable-->
-            <td scope="row">{{product.id}}</td>
-            <td><img [src]="product.thumbnail" [alt]="product.name"></td>
-            <td>{{product.name}}</td>
-            <td>{{product.price}}</td>*
-            <td><input #inputQuantityElement class="quantity" type="number" value="product.amount" (input)='updateQuantity(inputQuantityElement,product.id)' /></td>
-            <td><button (click)='removeProduct(product.id)'>Xóa</button></td>
-        </tr>
+        <tbody>
+            <tr class="item" *ngFor="let product of listProducts">
+                <!-- Template Reference variable-->
+                <td class="align-middle" scope="row">
+                    <p>{{product.id}}</p>
+                </td>
+                <td class="align-middle"><img class="w-25" [src]="product.thumbnail" [alt]="product.name"></td>
+                <td class="align-middle">
+                    <p>{{product.name}}</p>
+                </td>
+                <td class="align-middle">
+                    <p>{{changeCurrency(product.price)}} VNĐ</p>
+                </td>
+                <td class="align-middle"><input #inputQuantityElement class="quantity" type="number" value="product.amount" (input)='updateQuantity(inputQuantityElement,product.id)' /></td>
+                <td class="align-middle"><button type="button" class="remove_button" (click)='removeProduct(product.id)'>Xóa</button></td>
+            </tr>
+        </tbody>
     </table>
 </div>
