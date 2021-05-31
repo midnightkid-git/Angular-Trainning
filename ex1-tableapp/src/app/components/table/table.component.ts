@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Product} from '../../Models/product.model';
-import {changeCurrency, products} from '../../Models/products';
+import {removeProduct ,changeCurrency, products, getAmount} from '../../Models/products';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+  @Input()  listProducts:any;
   stt : number = 0;
-  listProducts :Product[] = products;
   constructor() {
   }
 
@@ -17,8 +17,15 @@ export class TableComponent implements OnInit {
   }
 
  removeProduct(pid:string):void{
-  const index = products.findIndex(product => product.id === pid);
-  products.splice(index,1);
+  removeProduct(pid);
+ }
+ updateQuantity(element:any,pid:string){
+  for(let i =0; i < this.listProducts.length; i++){
+    if(this.listProducts[i].id === pid){
+      this.listProducts[i].amount = element.value;
+    }
+  }
+
  }
 
   ngOnInit(): void {
