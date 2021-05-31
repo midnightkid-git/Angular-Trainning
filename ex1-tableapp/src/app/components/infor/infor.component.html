@@ -8,13 +8,15 @@
                 <div class="col-md-8">
                     <h6>Số lượng</h6>
                 </div>
-                <div class="col-md-4">{{amount}}</div>
+                <!-- Bug -->
+                <!-- <div class="col-md-4">{{getTotalAmount()}}</div> -->
+                <!-- xxxxx -->
             </div>
             <div class="row">
                 <div class="col-md-8">
                     <h6>Total </h6>
                 </div>
-                <div class="col-md-4">{{totalPrice}} VNĐ</div>
+                <div class="col-md-4">{{changeCurrency(getTotalPrice())}} VNĐ</div>
             </div>
         </div>
     </div>
