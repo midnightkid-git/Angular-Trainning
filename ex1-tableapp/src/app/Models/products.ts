@@ -70,12 +70,15 @@ export function  getTotalPrice(listProducts:Product[]){
 
 export function changeCurrency(price:number){
   let priceStr:string = price+'';
-  let result:string = priceStr.substring(0,priceStr.length/3);
+  let result:string = priceStr.substring(0,priceStr.length%3);
   let count = 0;
-  for(let i = priceStr.length/3; i < priceStr.length; i = i + 3){
+  for(let i = priceStr.length%3; i < priceStr.length; i = i + 3){
     count ++;
     result +='.';
     result += priceStr.substring(i,i+3);
+  }
+  if(result[0] == '.'){
+    result = result.substr(1,result.length)
   }
   return result;
 
